@@ -1,12 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>{{title}}</title>
-    <link href="../static/site.css" rel="stylesheet" />
-</head>
-<body>
-    <span class="message">{{message}}</span>{{content}}
-</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<span class="message">{{ message }}</span>{{ content }}
+{% endblock %}

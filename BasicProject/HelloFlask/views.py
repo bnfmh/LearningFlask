@@ -21,3 +21,13 @@ def home():
                            content = " on " + formatted_now,
                            message = "hello , flask",
                            title = "Hello Flask")
+
+@app.route('/api/data/')
+def get_data():
+    return app.send_static_file('scripts/data.json')
+
+@app.route('/about')
+def about():
+    return render_template("about.html", 
+                           title = 'About Hello Flask',
+                           content = 'Example app page for hello flask')

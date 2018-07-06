@@ -36,8 +36,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HelloFlask\static\site.css" />
+    <Content Include="HelloFlask\static\scripts\data.json" />
+    <Content Include="HelloFlask\static\contents\site.css" />
+    <Content Include="HelloFlask\templates\about.html" />
     <Content Include="HelloFlask\templates\index.html" />
+    <Content Include="HelloFlask\templates\layout.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +57,9 @@
   <ItemGroup>
     <Folder Include="HelloFlask\" />
     <Folder Include="HelloFlask\static\" />
+    <Folder Include="HelloFlask\static\fonts\" />
+    <Folder Include="HelloFlask\static\contents\" />
+    <Folder Include="HelloFlask\static\scripts\" />
     <Folder Include="HelloFlask\templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
