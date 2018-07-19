@@ -4,19 +4,17 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>e5fee858-5bcf-479d-bd77-7a7b38df9261</ProjectGuid>
+    <ProjectGuid>149839da-ccac-44c8-ae7a-4381df389463</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <StartupFile>runserver.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <LaunchProvider>Web launcher</LaunchProvider>
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <OutputPath>.</OutputPath>
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
-    <Name>FlaskWeb</Name>
-    <RootNamespace>FlaskWeb</RootNamespace>
+    <Name>FlaskPolls</Name>
+    <RootNamespace>FlaskPolls</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -29,45 +27,55 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="runserver.py" />
-    <Compile Include="FlaskWeb\__init__.py" />
-    <Compile Include="FlaskWeb\views.py" />
+    <Compile Include="FlaskPolls\__init__.py" />
+    <Compile Include="FlaskPolls\settings.py" />
+    <Compile Include="FlaskPolls\views.py" />
+    <Compile Include="FlaskPolls\models\__init__.py" />
+    <Compile Include="FlaskPolls\models\azuretablestorage.py" />
+    <Compile Include="FlaskPolls\models\factory.py" />
+    <Compile Include="FlaskPolls\models\memory.py" />
+    <Compile Include="FlaskPolls\models\mongodb.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="FlaskWeb\" />
-    <Folder Include="FlaskWeb\static\" />
-    <Folder Include="FlaskWeb\static\content\" />
-    <Folder Include="FlaskWeb\static\fonts\" />
-    <Folder Include="FlaskWeb\static\scripts\" />
-    <Folder Include="FlaskWeb\templates\" />
+    <Folder Include="FlaskPolls\" />
+    <Folder Include="FlaskPolls\models\" />
+    <Folder Include="FlaskPolls\static\" />
+    <Folder Include="FlaskPolls\static\content\" />
+    <Folder Include="FlaskPolls\static\fonts\" />
+    <Folder Include="FlaskPolls\static\scripts\" />
+    <Folder Include="FlaskPolls\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="FlaskWeb\static\content\bootstrap.css" />
-    <Content Include="FlaskWeb\static\content\bootstrap.min.css" />
-    <Content Include="FlaskWeb\static\content\site.css" />
-    <Content Include="FlaskWeb\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="FlaskWeb\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FlaskWeb\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="FlaskWeb\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="FlaskWeb\static\scripts\bootstrap.js" />
-    <Content Include="FlaskWeb\static\scripts\bootstrap.min.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery-1.10.2.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="FlaskWeb\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery.validate.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery.validate.min.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="FlaskWeb\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="FlaskWeb\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="FlaskWeb\static\scripts\respond.js" />
-    <Content Include="FlaskWeb\static\scripts\respond.min.js" />
-    <Content Include="FlaskWeb\static\scripts\_references.js" />
-    <Content Include="FlaskWeb\templates\about.html" />
-    <Content Include="FlaskWeb\templates\contact.html" />
-    <Content Include="FlaskWeb\templates\index.html" />
-    <Content Include="FlaskWeb\templates\layout.html" />
+    <Content Include="FlaskPolls\models\samples.json" />
+    <Content Include="FlaskPolls\static\content\bootstrap.css" />
+    <Content Include="FlaskPolls\static\content\bootstrap.min.css" />
+    <Content Include="FlaskPolls\static\content\site.css" />
+    <Content Include="FlaskPolls\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="FlaskPolls\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FlaskPolls\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="FlaskPolls\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="FlaskPolls\static\scripts\bootstrap.js" />
+    <Content Include="FlaskPolls\static\scripts\bootstrap.min.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery-1.10.2.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="FlaskPolls\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery.validate.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery.validate.min.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="FlaskPolls\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="FlaskPolls\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="FlaskPolls\static\scripts\respond.js" />
+    <Content Include="FlaskPolls\static\scripts\respond.min.js" />
+    <Content Include="FlaskPolls\static\scripts\_references.js" />
+    <Content Include="FlaskPolls\templates\about.html" />
+    <Content Include="FlaskPolls\templates\contact.html" />
+    <Content Include="FlaskPolls\templates\details.html" />
+    <Content Include="FlaskPolls\templates\index.html" />
+    <Content Include="FlaskPolls\templates\layout.html" />
+    <Content Include="FlaskPolls\templates\results.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
